@@ -17,6 +17,8 @@ Route::get('/', function () {
 
 //post.blade.phpを表示させる 問い合わせページ
 Route::get('post','PostController@post');
-
 Route::post('posts','PostController@create');
+
+//一覧表示
+Route::get('list','PostController@list');
 

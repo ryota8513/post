@@ -2,8 +2,8 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\Post;
 use Illuminate\Http\Request;
+use App\Models\Post;
 
 class PostController extends Controller
 {
@@ -22,5 +22,14 @@ public function create(Request $request){
     $posts ->save();
     return redirect('post');
 }
+
+public function list(){
+    $posts = post::all();
+    $date = ['post'=>$posts];
+    return view('list',$date);
 }
+
+
+}
+
 ?>
