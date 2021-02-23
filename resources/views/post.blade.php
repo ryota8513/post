@@ -21,7 +21,7 @@
         <div class="info">
      
     <form name="form1" method="POST" action='posts'>
-        {{ csrf_field() }}
+        @csrf
        <h1>名前</h1>
        <input class="search" name="name" type="text" placeholder="氏名入力">
        
@@ -32,8 +32,8 @@
        <input class="search" name="age" type="text" placeholder="年齢">
     
        <h1>性別</h1>
-       <input class="search" type="radio" name="gender" value="男" /> 男　
-　　　 <input class="search" type="radio" name="gender" value="女" /> 女
+       <input class="search" type="radio" name="gender" value="男" /> 男
+     <input class="search" type="radio" name="gender" value="女" /> 女
        
        <h1>問合内容</h1>
        <textarea   placeholder="お問い合わせ内容を入力して下さい" name="message"></textarea>

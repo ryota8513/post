@@ -32,10 +32,10 @@
            <button type="submit">編集</button>
         </form>
         
-        <!--<form name="delete" method="POST" action="delete">-->
-        <!--    @csrf-->
-        <!--    <input type="text" name="id">-->
-        <!--    <buttom type="submit">削除</buttom>-->
-        <!--</form>-->
+        <form name="delete" method="POST" action="delete">
+           @csrf
+           <input type="text" name="id">
+           <button type="submit">削除</button>
+        </form>
     </tabley>
 </html>
