@@ -29,6 +29,8 @@ public function list(){
     $date = ['posts'=>$posts];
     return view('list',$date);
 }
+
+
 public function edit(Request $request){
     $posts=post::find($request->id);
     return view('edit',compact('posts'));
@@ -53,12 +55,6 @@ public function delete(Request $request){
 // $posts=post::find($request->id)->delete();で削除できる
 public function remove(Request $request){
     $posts=post::find($request->id)->delete();
-    $posts->name=$request->name;
-    $posts->email=$request->email;
-    $posts->age=$request->age;
-    $posts->gender=$request->gender;
-    $posts->message=$request->message;
-    $posts->save();
     return redirect('list');
 }
 }
